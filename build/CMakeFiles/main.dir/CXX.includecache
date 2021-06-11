@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/imu.h
+cmath
+-
+
+/home/tannerkoza/SFSAS/HW4/src/imu.cpp
+iostream
+-
+imu.h
+/home/tannerkoza/SFSAS/HW4/src/imu.h
+
+/home/tannerkoza/SFSAS/HW4/src/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+imu.h
+/home/tannerkoza/SFSAS/HW4/src/imu.h
+
