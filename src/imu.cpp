@@ -19,7 +19,7 @@ double *IMU::propagate(double *q, double *gyro)
 {
     q[0] = (Q[0] + (Q[1] * -0.5 * gyro[0] * dT) + (Q[2] * -0.5 * gyro[1] * dT) + (Q[3] * -0.5 * gyro[2] * dT)); // filter calculations using class variable
     q[1] = ((Q[0] * 0.5 * gyro[0] * dT) + Q[1] + (Q[2] * 0.5 * gyro[2] * dT) + (Q[3] * -0.5 * gyro[1] * dT));
-    q[2] = ((Q[0] * 0.5 * gyro[1] * dT) + (Q[1] * -0.5 * gyro[2] * dT) + q[2] + (Q[3] * 0.5 * gyro[0] * dT));
+    q[2] = ((Q[0] * 0.5 * gyro[1] * dT) + (Q[1] * -0.5 * gyro[2] * dT) + Q[2] + (Q[3] * 0.5 * gyro[0] * dT));
     q[3] = ((Q[0] * 0.5 * gyro[2] * dT) + (Q[1] * 0.5 * gyro[1] * dT) + (Q[2] * -0.5 * gyro[0] * dT) + Q[3]);
 
     double *row_ptr = q; // create pointer for calculated array
