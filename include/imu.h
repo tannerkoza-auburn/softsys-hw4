@@ -13,8 +13,8 @@ public:
 
     IMU(double *q, double tstep); // constructor
 
-    double *propagate(double *q, double *gyro);
-    void normalize(double *ptr);
+    void propagate(double (&q)[4], double (&gyro)[3]);
+    void normalize(double (&q)[4]);
     void update(double (&q)[4], double (&gyro)[3]);
 };
 
